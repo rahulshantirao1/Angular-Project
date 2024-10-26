@@ -1,0 +1,8 @@
+.primary{
+    /* //style="color: black; background-color: blue; text-decoration: dashed;"; */
+    font-style: italic;
+    color: black;
+    background-color: blueviolet;
+    text-decoration: dashed;
+    text-transform: none;
+}

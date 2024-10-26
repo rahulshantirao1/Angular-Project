@@ -1,0 +1,41 @@
+<p>get-api works!</p>
+<div class="row">
+    <div class="col-2">
+        <button class="btn btn-success"  (click)="getAllUser()">Get Users</button>
+    </div>
+    <div class="col-3">
+
+        <table>
+            <tr class="primary" style="height: max-content; background-color: blue;">
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Update</th>
+            </tr>
+            @for (item of userList; track $index) {
+                <tr class="primary"><td>{{item.name}}</td>      
+                <td>{{item.mobile}}</td>
+                <td>{{item.email}}</td>
+                <button style="background-color: yellow;" (click)="onEdit(item)">Edit</button>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name:<input type="text" [(ngModel)]="studObj.name"/>
+    Email:<input type="text" [(ngModel)]="studObj.email">
+    Mobile:<input type="text" [(ngModel)]="studObj.mobile">
+   <button (click)="onSave()">Save</button>
+   {{studObj|json}}
+</body>
+</html>
